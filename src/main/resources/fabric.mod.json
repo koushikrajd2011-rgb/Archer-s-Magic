@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "archers-magic",
+	"version": "${version}",
+	"name": "Archer's Magic",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/archers-magic/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"archer.ArcherSMagic"
+		],
+		"client": [
+			"archer.client.ArcherSMagicClient"
+		]
+	},
+	"mixins": [
+		"archers-magic.mixins.json",
+		{
+			"config": "archers-magic.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
